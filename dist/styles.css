@@ -91,4 +91,17 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.flex {
+  display: flex;
+}
+.flex__ai-center {
+  align-items: center;
+}
+.flex__jc-sb {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
 }/*# sourceMappingURL=styles.css.map */
