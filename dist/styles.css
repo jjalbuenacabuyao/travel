@@ -104,4 +104,8 @@ select {
 
 .grid {
   display: grid;
+}
+
+.bold {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
