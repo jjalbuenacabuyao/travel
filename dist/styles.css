@@ -49,6 +49,7 @@ html:focus-within {
 html {
   font-size: 100%;
   font-family: "Helvetica", sans-serif;
+  color: #202124;
 }
 
 /* Set core body defaults */
@@ -56,11 +57,19 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: #F6F8F9;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #202124;
 }
 
 /* Make images easier to work with */
@@ -92,13 +101,31 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.header {
+  max-width: 90em;
+  padding: 1rem 2rem;
+}
+@media (min-width: 1024px) {
+  .header #hamburger {
+    display: none;
+  }
+}
+.header nav {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header nav {
+    display: block;
+  }
+}
+
 .flex {
   display: flex;
 }
-.flex__ai-center {
+.flex__ai__center {
   align-items: center;
 }
-.flex__jc-sb {
+.flex__jc__sb {
   justify-content: space-between;
 }
 

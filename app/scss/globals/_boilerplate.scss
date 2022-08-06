@@ -41,6 +41,7 @@ html:focus-within {
 html {
     font-size: 100%;
     font-family: var.$helvetica;
+    color: var.$black;
 }
 
 /* Set core body defaults */
@@ -48,11 +49,19 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-color: var.$white;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var.$black;
 }
 
 /* Make images easier to work with */

@@ -1,11 +1,11 @@
 .flex {
     display: flex;
 
-    &__ai-center {
+    &__ai__center {
         align-items: center;
     }
 
-    &__jc-sb {
+    &__jc__sb {
         justify-content: space-between;
     }
 }
