@@ -110,6 +110,9 @@ select {
     display: none;
   }
 }
+.header .header__logo {
+  color: #FA6980;
+}
 .header nav {
   display: none;
 }
