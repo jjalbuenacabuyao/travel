@@ -2,7 +2,7 @@
 
 .header {
     max-width: 90em;
-    padding: 1rem 2rem;
+    padding: 1rem 1.1875rem;
 
     #hamburger {
         @media (min-width: 1024px) {
@@ -49,5 +49,27 @@
     .next,
     .fa-angles-right {
         color: var.$pink;
+    }
+}
+
+main {
+    article {
+        padding: 2rem 1.875rem;
+
+        h1 {
+            margin-block-end: 2rem;
+            font-size: var.$fs-32;
+            font-weight: 700;
+        }
+
+        p:not(:last-child) {
+            margin-block-end: 1.875rem;
+        }
+
+        p {
+            font-size: var.$fs-14;
+            color: var.$gray;
+            text-align: justify;
+        }
     }
 }

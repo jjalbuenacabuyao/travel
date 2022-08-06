@@ -103,7 +103,7 @@ select {
 }
 .header {
   max-width: 90em;
-  padding: 1rem 2rem;
+  padding: 1rem 1.1875rem;
 }
 @media (min-width: 1024px) {
   .header #hamburger {
@@ -146,6 +146,23 @@ select {
 .jumbotron .next,
 .jumbotron .fa-angles-right {
   color: #FA6980;
+}
+
+main article {
+  padding: 2rem 1.875rem;
+}
+main article h1 {
+  margin-block-end: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main article p:not(:last-child) {
+  margin-block-end: 1.875rem;
+}
+main article p {
+  font-size: 0.875rem;
+  color: #A6ADB4;
+  text-align: justify;
 }
 
 .flex {
