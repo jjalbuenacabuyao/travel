@@ -171,6 +171,8 @@ select {
   background-color: #F6F8F9;
   height: 100vh;
   flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
 }
 .overlay a {
   font-size: 0.6875rem;
@@ -224,6 +226,10 @@ select {
 }
 .overlay__footer .social__links a {
   color: #F6F8F9;
+}
+
+.overlay[data-visible=true] {
+  transform: translateX(0);
 }
 
 main article,

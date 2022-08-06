@@ -15,7 +15,7 @@
   <body>
     <header class="flex flex__ai__center flex__jc__center header">
       <button id="hamburger">
-        <i class="fa fa-bars fa-xl"></i>
+        <i onclick="iconToggle(this)" class="fa fa-bars fa-xl"></i>
       </button>
 
       <a class="header__logo bold" href="index.html">Travel</a>
@@ -32,7 +32,7 @@
       <i class="fa fa-user fa-xl"></i>
     </header>
 
-    <div class="overlay flex flex__jc__sb">
+    <div id="mobile-overlay" data-visible="false" class="overlay flex flex__jc__sb">
       <nav class="overlay__nav flex flex__ai__center">
         <ul>
           <li><a class="home" href="index.html">HOME</a></li>

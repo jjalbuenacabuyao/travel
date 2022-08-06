@@ -77,6 +77,8 @@
     background-color: var.$white;
     height: 100vh;
     flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
 
     a {
         font-size: var.$fs-11;
@@ -145,6 +147,10 @@
             gap: 1rem;
         }
     }
+}
+
+.overlay[data-visible='true'] {
+    transform: translateX(0);
 }
 
 main {
