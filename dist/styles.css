@@ -148,7 +148,8 @@ select {
   color: #FA6980;
 }
 
-main article {
+main article,
+main .comments {
   padding: 2rem 1.875rem;
 }
 main article h1 {
@@ -163,6 +164,25 @@ main article p {
   font-size: 0.875rem;
   color: #A6ADB4;
   text-align: justify;
+}
+main .comments {
+  flex-direction: column;
+  gap: 1.875rem;
+  text-align: justify;
+}
+main .comments div .person {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .comments div .person .fa-user {
+  margin-inline-end: 0.2rem;
+}
+main .comments div .main-comment {
+  margin-block-end: 1rem;
+}
+main .comments .time {
+  color: #A6ADB4;
+  font-size: 0.8125rem;
 }
 
 .flex {

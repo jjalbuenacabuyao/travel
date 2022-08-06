@@ -53,9 +53,13 @@
 }
 
 main {
-    article {
-        padding: 2rem 1.875rem;
 
+    article,
+    .comments {
+        padding: 2rem 1.875rem;
+    }
+
+    article {
         h1 {
             margin-block-end: 2rem;
             font-size: var.$fs-32;
@@ -70,6 +74,32 @@ main {
             font-size: var.$fs-14;
             color: var.$gray;
             text-align: justify;
+        }
+    }
+
+    .comments {
+        flex-direction: column;
+        gap: 1.875rem;
+        text-align: justify;
+
+        div {
+            .person {
+                font-size: var.$fs-24;
+                font-weight: 700;
+
+                .fa-user {
+                    margin-inline-end: 0.2rem;
+                }
+            }
+
+            .main-comment {
+                margin-block-end: 1rem;
+            }
+        }
+
+        .time {
+            color: var.$gray;
+            font-size: var.$fs-13;
         }
     }
 }
