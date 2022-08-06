@@ -120,17 +120,32 @@ select {
 }
 
 .jumbotron {
-  background-image: url("/images/jumbotron-img-mobile.jpg");
+  background-image: url("/images/jumbotron-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-block: 8.875rem 3rem;
+  padding-block: 8.875rem 2.5rem;
   padding-inline: 1.875rem;
   text-align: center;
 }
 .jumbotron h1,
-.jumbotron a {
+.jumbotron a,
+.jumbotron i {
   color: #F6F8F9;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.jumbotron h1 {
+  line-height: 1.1;
+  font-size: 1.875rem;
+  margin-block-end: 1rem;
+}
+.jumbotron__links {
+  margin-block-end: 3rem;
+}
+.jumbotron .next,
+.jumbotron .fa-angles-right {
+  color: #FA6980;
 }
 
 .flex {
