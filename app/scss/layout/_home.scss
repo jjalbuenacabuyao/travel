@@ -2,9 +2,20 @@
 
 .header {
     max-width: 90em;
-    padding: 1rem 1.1875rem;
+    padding: 1rem 1.875rem;
+    position: relative;
+
+    #hamburger,
+    .fa-user {
+        position: absolute;
+    }
 
     #hamburger {
+        left: 1.875rem;
+        border: 0;
+        cursor: pointer;
+        z-index: 999;
+
         @media (min-width: 1024px) {
             display: none;
         }
@@ -20,6 +31,10 @@
         @media (min-width: 1024px) {
             display: block;
         }
+    }
+
+    .fa-user {
+        right: 1.875rem;
     }
 }
 
@@ -53,6 +68,82 @@
     .next,
     .fa-angles-right {
         color: var.$pink;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    background-color: var.$white;
+    height: 100vh;
+    flex-direction: column;
+
+    a {
+        font-size: var.$fs-11;
+    }
+
+    &__nav {
+        flex: 1;
+        margin-left: 3.5rem;
+
+        li {
+            padding-inline-start: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        li:nth-child(1)::marker,
+        li:nth-child(2)::marker,
+        li:nth-child(3)::marker,
+        li:nth-child(4)::marker,
+        li:nth-child(5)::marker {
+            font-family: "Font Awesome 5 Free";
+            font-size: 1rem;
+            font-weight: 700;
+            color: var.$black;
+        }
+
+        li:nth-child(1)::marker {
+            content: '\f015';
+
+        }
+
+        li:nth-child(2)::marker {
+            content: '\f14e';
+        }
+
+        li:nth-child(3)::marker {
+            content: '\f03e';
+        }
+
+        li:nth-child(4)::marker {
+            content: '\f2b9';
+        }
+
+        li:nth-child(5)::marker {
+            content: '\f007';
+        }
+    }
+
+    &__footer {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 3rem;
+        background-color: var.$black;
+        width: 100%;
+        padding: 2.5rem;
+
+        .footer__links {
+            a {
+                color: var.$white;
+            }
+        }
+
+        .social__links {
+            a {
+                color: var.$white;
+            }
+            gap: 1rem;
+        }
     }
 }
 
