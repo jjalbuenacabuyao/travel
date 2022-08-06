@@ -119,6 +119,20 @@ select {
   }
 }
 
+.jumbotron {
+  background-image: url("/images/jumbotron-img-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-block: 8.875rem 3rem;
+  padding-inline: 1.875rem;
+  text-align: center;
+}
+.jumbotron h1,
+.jumbotron a {
+  color: #F6F8F9;
+}
+
 .flex {
   display: flex;
 }
