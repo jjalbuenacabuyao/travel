@@ -4,6 +4,20 @@
     max-width: 90em;
     padding: 1rem 1.875rem;
     position: relative;
+    justify-content: center;
+
+    @media (min-width: 48em) {
+        justify-content: space-between;
+
+        #hamburger {
+            display: none;
+        }
+
+        .header__logo {
+            flex-basis: 50%;
+        }
+        
+    }
 
     #hamburger,
     .fa-user {
@@ -15,10 +29,6 @@
         border: 0;
         cursor: pointer;
         z-index: 999;
-
-        @media (min-width: 1024px) {
-            display: none;
-        }
     }
 
     .header__logo {
@@ -28,13 +38,26 @@
     nav {
         display: none;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 48em) {
             display: block;
+
+            ul {
+                display: flex;
+                gap: 1.5rem;
+            }
+
+            a {
+                font-size: var.$fs-11;
+            }
         }
     }
 
     .fa-user {
         right: 1.875rem;
+
+        @media (min-width: 48em) {
+            position: static;
+        }
     }
 }
 
@@ -46,6 +69,12 @@
     padding-block: 8.875rem 2.5rem;
     padding-inline: 1.875rem;
     text-align: center;
+
+    @media (min-width: 90em) {
+        height: 37.5rem;
+        padding-block: 14.375rem 3.125rem;
+        padding-inline: 3.125rem;
+    }
 
     h1,
     a,
@@ -59,15 +88,34 @@
         line-height: 1.1;
         font-size: var.$fs-30;
         margin-block-end: 1rem;
+
+        @media (min-width: 90em) {
+            font-size: var.$fs-50;
+            margin-block-end: 2.1875rem;
+        }
     }
 
     &__links {
         margin-block-end: 3rem;
+        justify-content: space-between;
+
+        @media (min-width: 48em) {
+            justify-content: center;
+            gap: 2rem;
+            margin-block-end: 11.5rem;
+        }
     }
 
     .next,
     .fa-angles-right {
         color: var.$pink;
+    }
+
+    &__footer {
+        @media (min-width: 90em) {
+            // position: absolute;
+            // bottom: 0;
+        }
     }
 }
 
@@ -79,6 +127,10 @@
     flex-direction: column;
     transform: translateX(-100%);
     transition: transform 300ms ease-in-out;
+
+    @media (min-width: 48em) {
+        display: none;
+    }
 
     a {
         font-size: var.$fs-11;
@@ -144,6 +196,7 @@
             a {
                 color: var.$white;
             }
+
             gap: 1rem;
         }
     }
@@ -154,6 +207,11 @@
 }
 
 main {
+    @media (min-width: 90em) {
+        grid-template-columns: 1fr 1.5fr;
+        padding: 6.25rem 8.75rem;
+        gap: 6.25rem;
+    }
 
     article,
     .comments {
@@ -161,6 +219,27 @@ main {
     }
 
     article {
+
+        @media (min-width: 48em) and (max-width: 89.9em) {
+            padding: 5rem;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+            align-items: center;
+            justify-content: center;
+
+            :nth-child(2) {
+                grid-row: 2 / 3;
+            }
+
+            :nth-child(3) {
+                grid-row: 3 / 4;
+            }
+        }
+
+        @media (min-width: 90em) {
+            padding: 0;
+        }
+
         h1 {
             margin-block-end: 2rem;
             font-size: var.$fs-32;
@@ -182,6 +261,14 @@ main {
         flex-direction: column;
         gap: 1.875rem;
         text-align: justify;
+
+        @media (min-width: 48em) {
+            padding: 0 5rem 5rem;
+        }
+
+        @media (min-width: 90em) {
+            padding: 0;
+        }
 
         div {
             .person {

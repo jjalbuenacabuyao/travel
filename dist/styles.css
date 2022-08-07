@@ -105,6 +105,18 @@ select {
   max-width: 90em;
   padding: 1rem 1.875rem;
   position: relative;
+  justify-content: center;
+}
+@media (min-width: 48em) {
+  .header {
+    justify-content: space-between;
+  }
+  .header #hamburger {
+    display: none;
+  }
+  .header .header__logo {
+    flex-basis: 50%;
+  }
 }
 .header #hamburger,
 .header .fa-user {
@@ -116,24 +128,31 @@ select {
   cursor: pointer;
   z-index: 999;
 }
-@media (min-width: 1024px) {
-  .header #hamburger {
-    display: none;
-  }
-}
 .header .header__logo {
   color: #FA6980;
 }
 .header nav {
   display: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 48em) {
   .header nav {
     display: block;
+  }
+  .header nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .header nav a {
+    font-size: 0.6875rem;
   }
 }
 .header .fa-user {
   right: 1.875rem;
+}
+@media (min-width: 48em) {
+  .header .fa-user {
+    position: static;
+  }
 }
 
 .jumbotron {
@@ -144,6 +163,13 @@ select {
   padding-block: 8.875rem 2.5rem;
   padding-inline: 1.875rem;
   text-align: center;
+}
+@media (min-width: 90em) {
+  .jumbotron {
+    height: 37.5rem;
+    padding-block: 14.375rem 3.125rem;
+    padding-inline: 3.125rem;
+  }
 }
 .jumbotron h1,
 .jumbotron a,
@@ -157,14 +183,27 @@ select {
   font-size: 1.875rem;
   margin-block-end: 1rem;
 }
+@media (min-width: 90em) {
+  .jumbotron h1 {
+    font-size: 3.125rem;
+    margin-block-end: 2.1875rem;
+  }
+}
 .jumbotron__links {
   margin-block-end: 3rem;
+  justify-content: space-between;
+}
+@media (min-width: 48em) {
+  .jumbotron__links {
+    justify-content: center;
+    gap: 2rem;
+    margin-block-end: 11.5rem;
+  }
 }
 .jumbotron .next,
 .jumbotron .fa-angles-right {
   color: #FA6980;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -173,6 +212,11 @@ select {
   flex-direction: column;
   transform: translateX(-100%);
   transition: transform 300ms ease-in-out;
+}
+@media (min-width: 48em) {
+  .overlay {
+    display: none;
+  }
 }
 .overlay a {
   font-size: 0.6875rem;
@@ -232,9 +276,36 @@ select {
   transform: translateX(0);
 }
 
+@media (min-width: 90em) {
+  main {
+    grid-template-columns: 1fr 1.5fr;
+    padding: 6.25rem 8.75rem;
+    gap: 6.25rem;
+  }
+}
 main article,
 main .comments {
   padding: 2rem 1.875rem;
+}
+@media (min-width: 48em) and (max-width: 89.9em) {
+  main article {
+    padding: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  main article :nth-child(2) {
+    grid-row: 2/3;
+  }
+  main article :nth-child(3) {
+    grid-row: 3/4;
+  }
+}
+@media (min-width: 90em) {
+  main article {
+    padding: 0;
+  }
 }
 main article h1 {
   margin-block-end: 2rem;
@@ -253,6 +324,16 @@ main .comments {
   flex-direction: column;
   gap: 1.875rem;
   text-align: justify;
+}
+@media (min-width: 48em) {
+  main .comments {
+    padding: 0 5rem 5rem;
+  }
+}
+@media (min-width: 90em) {
+  main .comments {
+    padding: 0;
+  }
 }
 main .comments div .person {
   font-size: 1.5rem;
