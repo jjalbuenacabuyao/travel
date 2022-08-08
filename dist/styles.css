@@ -102,7 +102,6 @@ select {
   }
 }
 .header {
-  max-width: 90em;
   padding: 1rem 1.875rem;
   position: relative;
   justify-content: center;
@@ -116,6 +115,11 @@ select {
   }
   .header .header__logo {
     flex-basis: 50%;
+  }
+}
+@media (min-width: 48em) and (min-width: 64em) {
+  .header .header__logo {
+    flex-basis: 75%;
   }
 }
 .header #hamburger,
@@ -164,7 +168,7 @@ select {
   padding-inline: 1.875rem;
   text-align: center;
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   .jumbotron {
     height: 37.5rem;
     padding-block: 14.375rem 3.125rem;
@@ -183,9 +187,9 @@ select {
   font-size: 1.875rem;
   margin-block-end: 1rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   .jumbotron h1 {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
     margin-block-end: 2.1875rem;
   }
 }
@@ -276,7 +280,7 @@ select {
   transform: translateX(0);
 }
 
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   main {
     grid-template-columns: 1fr 1.5fr;
     padding: 6.25rem 8.75rem;
@@ -287,7 +291,7 @@ main article,
 main .comments {
   padding: 2rem 1.875rem;
 }
-@media (min-width: 48em) and (max-width: 89.9em) {
+@media (min-width: 48em) and (max-width: 63.9em) {
   main article {
     padding: 5rem;
     grid-template-columns: repeat(2, 1fr);
@@ -302,7 +306,7 @@ main .comments {
     grid-row: 3/4;
   }
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   main article {
     padding: 0;
   }
@@ -330,7 +334,7 @@ main .comments {
     padding: 0 5rem 5rem;
   }
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   main .comments {
     padding: 0;
   }
@@ -366,7 +370,7 @@ main .comments .time {
   padding: 3.75rem 5rem;
   gap: 2rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   .main-footer .footer__container {
     grid-template-columns: 0.5fr 2fr 2fr 1fr;
   }
@@ -382,6 +386,9 @@ main .comments .time {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
+.main-footer .footer__container__links ul {
+  justify-self: end;
+}
 .main-footer .footer__container__links ul li {
   margin-bottom: 0.3rem;
 }
@@ -395,7 +402,7 @@ main .comments .time {
   padding: 0.2rem;
   color: #F6F8F9;
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   .main-footer .footer__container__email {
     align-self: center;
     justify-self: center;
@@ -406,7 +413,7 @@ main .comments .time {
   justify-self: end;
   gap: 1.25rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   .main-footer .footer__container__social {
     align-self: flex-start;
   }
