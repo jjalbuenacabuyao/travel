@@ -160,7 +160,7 @@ select {
 }
 
 .jumbotron {
-  background-image: url("../images/jumbotron-img.jpg");
+  background-image: url("../../../images/jumbotron-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
